@@ -6,12 +6,27 @@
  * 
  * This is not directly affiliated with Facebook in any way.
  * 
- * Use of this software is at your own risk, with no warranty implied.
+ * Copyright (c) 2013, Jeff Pickhardt
+ * 
+ * Permission to use, copy, modify, and/or distribute this
+ * software for any purpose is hereby granted, provided
+ * that the above copyright notice, this permission notice,
+ * and the following disclaimer appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR
+ * DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE
+ * INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+ * FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ * SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+ * DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+ * PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+ * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+ * WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
 var fbConsole = (function(FB) {
   this.fbConsole = {};
-  fbConsole.version = "0.1.1";
+  fbConsole.version = "0.1.2";
   
   if (!FB) {
     return error("FB not yet declared.");
