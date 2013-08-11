@@ -11,7 +11,7 @@
 
 var fbConsole = (function(FB) {
   this.fbConsole = {};
-  fbConsole.version = "0.1.0";
+  fbConsole.version = "0.1.1";
   
   if (!FB) {
     return error("FB not yet declared.");
@@ -53,7 +53,7 @@ var fbConsole = (function(FB) {
       output("**********************************");
 
       try {
-        FB["old_" + fnName].call(null, arguments);
+        FB["old_" + fnName].apply(null, arguments);
       } catch(err) {
         error(err);
       }
@@ -65,4 +65,6 @@ var fbConsole = (function(FB) {
     FB["old_" + prop] = FB[prop];
     FB[prop] = shimGenerator(prop);
   }
+  
+  return fbConsole;
 }).call(this, FB);
